@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="absolute inset-x-0 bottom-60 md:bottom-60 p-4">
+        <div class="absolute inset-x-0 bottom-60 md:bottom-96 p-4">
             <div class="flex items-center justify-between">
                 <button @click="prev" class="bg-white text-gray-800 p-2 rounded-full focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
