@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <!-- navbar -->
       <nav class="bg-white dark:border-t-blue-700 border-t-4 border-orange-400 dark:bg-gray-900 fixed top-0 w-full z-10">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" class="flex items-center">
+          <a class="flex items-center">
             <span class="self-center text-3xl font-mono font-semibold whitespace-nowrap dark:text-white">Arif</span>
           </a>
           <button data-collapse-toggle="navbar-default" type="button"
