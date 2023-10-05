@@ -6,16 +6,16 @@
                 <div class="w-full h-full bg-cover bg-center bg-no-repeat"
                     :style="{ backgroundImage: 'url(' + images[currentIndex] + ')' }"></div>
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <div class="text-center py-20 bg-cover bg-center bg-no-repeat" id="head">
-                        <h1 class="mb-4 text-4xl font-extrabold tracking-tight 0 md:text-5xl text-white">
+                    <div  class="text-center py-20 bg-cover bg-center bg-no-repeat" id="head">
+                        <h1 data-aos="zoom-in" class="mb-4 text-4xl font-extrabold tracking-tight 0 md:text-5xl text-white">
                             Arif Learning Path
                         </h1>
-                        <p class="mb-6 text-lg font-normal text-white lg:text-xl">
+                        <p data-aos="zoom-in" class="mb-6 text-lg font-normal text-white lg:text-xl">
                             Here at Flowbite we focus on markets where technology, innovation, and capital can unlock
                             long-term value and
                             drive economic growth.
                         </p>
-                        <a href="#"
+                        <a data-aos="zoom-in" href="#"
                             class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                             Learn more
                             <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -47,13 +47,13 @@
     </div>
     <!-- Course -->
     <div class="max-w-screen-xl mx-auto">
-        <div class="text-center py-20 bg-cover bg-center bg-no-repeat" id="head">
+        <div data-aos="zoom-in" class="text-center py-20 bg-cover bg-center bg-no-repeat" id="head">
             <h1
                 class="mb-4 text-xl font-bold tracking-tight md:text-2xl text-gray-800 dark:text-white border-b-2 border-orange-600 inline-block  pb-3">
                 Available Course
             </h1>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div v-for="(item, index) in items" :key="index">
                 <div
                     class="h-auto max-w-full bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -85,11 +85,11 @@
     <div class="bg-gray-200 mt-20 dark:bg-slate-800">
         <div class="max-w-screen-xl mx-auto">
             <div class="text-center py-20 bg-cover bg-center bg-no-repeat" id="head">
-                <h1
+                <h1 data-aos="zoom-in"
                     class="mb-20  text-xl font-bold tracking-tight md:text-2xl text-gray-800 dark:text-white border-b-2 border-orange-600 inline-block  pb-3">
                     Gallery
                 </h1>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div data-aos="zoom-in" class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div v-for="(column, columnIndex) in imageGrid" :key="columnIndex" class="grid gap-4">
                         <div v-for="(item, itemIndex) in column" :key="itemIndex">
                             <img class="h-auto max-w-full rounded-lg" :src="item.src" alt="Gambar">
@@ -100,7 +100,7 @@
         </div>
     </div>
     <!-- contact -->
-    <div class="max-w-screen-xl mx-auto py-20">
+    <div data-aos="zoom-in" class="max-w-screen-xl mx-auto py-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="md:mx-auto text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -174,7 +174,17 @@
 </template>
 
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default {
+    mounted() {
+        AOS.init({
+            // Pengaturan AOS di sini
+            duration: 800, // Durasi animasi dalam milidetik
+            easing: 'ease-in-out', // Gaya animasi
+        });
+    },
     data() {
         return {
             currentIndex: 0,

@@ -1,7 +1,7 @@
 <template lang="">
 <div>
-    <div class="h-96 bg-slate-100 dark:bg-gray-800">
-        <div class="max-w-screen-xl mx-auto py-20">
+    <div  class="h-96 bg-slate-100 dark:bg-gray-800">
+        <div data-aos="fade-up" class="max-w-screen-xl mx-auto py-20">
             <div class="text-center py-24 dark:text-white">
                 <div class="text-4xl font-mono mb-2">ABOUT US</div>
                 <p class="font-mono">Home / About</p>
@@ -9,12 +9,12 @@
         </div>
     </div>
     <div class="pt-20 px-5">
-        <div class="text-center pb-20">
+        <div data-aos="fade-up" class="text-center pb-20">
             <div class="font-serif text-2xl  border-b-4 inline-block pb-2 border-b-orange-400 dark:border-blue-700 dark:text-white mb-20">OUR INFORMATION</div>
             <div class="font-serif dark:text-white">A WONDERFUL SERENITY HAS TAKEN POSSESSION OF MY ENTIRE SOUL, LIKE THESE</div>
             <div class="font-serif dark:text-white">SWEET MORNINGS OF SPRING WHICH I ENJOY WITH MY WHOLE HEART.</div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-screen-xl mx-auto pb-20">
+        <div data-aos="zoom-in" class="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-screen-xl mx-auto pb-20">
             <div class="grid gap-5">
                 <div class="dark:text-white">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</div>
                 <div class="dark:text-white">To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</div>
@@ -64,12 +64,12 @@
         </div>
     </div>
     <div class="pt-20 px-5 dark:bg-gray-800">
-        <div class="text-center pb-20">
+        <div data-aos="fade-up" class="text-center pb-20">
             <div class="font-serif text-2xl  border-b-4 inline-block pb-2 border-b-orange-400 dark:border-blue-700 dark:text-white mb-20">OUR TEAM</div>
             <div class="font-serif dark:text-white">A WONDERFUL SERENITY HAS TAKEN POSSESSION OF MY ENTIRE SOUL, LIKE THESE</div>
             <div class="font-serif dark:text-white">SWEET MORNINGS OF SPRING WHICH I ENJOY WITH MY WHOLE HEART.</div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-screen-xl mx-auto pb-20">
+        <div data-aos="zoom-in" class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-screen-xl mx-auto pb-20">
             <div class="text-center justify-end items-center ">
                 <div class="flex flex-col">
                     <img class="mb-5 rounded-xl" style="max-height: 400px" src="https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="">
@@ -94,7 +94,7 @@
         </div>
     </div>
     <!-- contact -->
-    <div class="max-w-screen-xl mx-auto py-20">
+    <div data-aos="fade-up" class="max-w-screen-xl mx-auto py-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="md:mx-auto text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-6 mx-auto dark:text-white">
@@ -154,9 +154,18 @@
 </template>
 
 <script>
-export default {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-}
+export default {
+  mounted() {
+    AOS.init({
+      // Pengaturan AOS di sini
+      duration: 800, // Durasi animasi dalam milidetik
+      easing: 'ease-in-out', // Gaya animasi
+    });
+  },
+};
 </script>
 
 <style lang="">

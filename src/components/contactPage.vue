@@ -1,19 +1,19 @@
 <template lang="">
 <div>
     <div class="h-96 bg-slate-100 dark:bg-gray-800">
-        <div class="max-w-screen-xl mx-auto py-20">
+        <div data-aos="fade-up" class="max-w-screen-xl mx-auto py-20">
             <div class="text-center py-24 dark:text-white">
                 <div class="text-4xl font-mono mb-2">CONTACT</div>
                 <p class="font-mono">Home / Contact</p>
             </div>
         </div>
     </div>
-    <div class="text-center pt-20 pb-16">
+    <div data-aos="zoom-in" class="text-center pt-20 pb-16">
         <div class="font-serif text-2xl  border-b-4 inline-block pb-2 border-b-orange-400 dark:border-blue-700 dark:text-white mb-20">GET IN TOUCH</div>
         <div class="font-serif dark:text-white">A WONDERFUL SERENITY HAS TAKEN POSSESSION OF MY ENTIRE SOUL, LIKE THESE</div>
         <div class="font-serif dark:text-white">SWEET MORNINGS OF SPRING WHICH I ENJOY WITH MY WHOLE HEART.</div>
     </div>
-    <div class="max-w-screen-sm mx-auto">
+    <div data-aos="fade-up" class="max-w-screen-sm mx-auto">
         <form class="px-5">
             <div>
                 <label for="small-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
@@ -33,7 +33,7 @@
         </form>
     </div>
     <!-- contact -->
-    <div class="max-w-screen-xl mx-auto py-20 ">
+    <div data-aos="fade-up" class="max-w-screen-xl mx-auto py-20 ">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="md:mx-auto text-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mb-6 mx-auto dark:text-white">
@@ -93,9 +93,18 @@
 </template>
 
 <script>
-export default {
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-}
+export default {
+  mounted() {
+    AOS.init({
+      // Pengaturan AOS di sini
+      duration: 800, // Durasi animasi dalam milidetik
+      easing: 'ease-in-out', // Gaya animasi
+    });
+  },
+};
 </script>
 
 <style lang="">

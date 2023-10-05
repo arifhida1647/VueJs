@@ -7,8 +7,13 @@ import HomePage from './components/HomePage.vue'
 import AboutPage from './components/aboutPage.vue'
 import ContactPage from './components/contactPage.vue'
 import { ref, reactive } from 'vue';
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init({
+      // Pengaturan AOS di sini
+      duration: 800, // Durasi animasi dalam milidetik
+      easing: 'ease-in-out', // Gaya animasi
+    });
 // Fungsi untuk mengganti tema
 let isDarkMode = false;
 const toggleTheme = () => {
@@ -129,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
        <!-- About -->
        <div v-if="stateNav.activeNav === 'About'">
-        <AboutPage />
+        <AboutPage/>
       </div>
       <!-- page course -->
       <div v-if="stateNav.activeNav === 'Course'">
