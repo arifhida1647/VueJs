@@ -4,6 +4,8 @@ import Heading from './components/headingCourse.vue'
 import Sidebar from './components/sidebar.vue'
 import ListUser from './components/listUserCourse.vue'
 import HomePage from './components/HomePage.vue'
+import AboutPage from './components/aboutPage.vue'
+import ContactPage from './components/contactPage.vue'
 import { ref, reactive } from 'vue';
 
 
@@ -65,8 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <nav class="bg-white dark:border-t-blue-700 border-t-4 border-orange-400 dark:bg-gray-900 fixed top-0 w-full z-10">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" class="flex items-center">
-            <img src="https://img.freepik.com/free-vector/colorful-letter-gradient-logo-design_474888-2309.jpg?w=826&t=st=1696452562~exp=1696453162~hmac=https://img.freepik.com/free-vector/abstract-wavy-background-template_1035-8922.jpg?w=826&t=st=1696452469~exp=1696453069~hmac=e97a82da66e51b069a83d11d52dd451d319823b3e2507a7e6114c22bc60144cc" class="h-10 mr-3" alt="Flowbite Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Arif</span>
+            <span class="self-center text-3xl font-mono font-semibold whitespace-nowrap dark:text-white">Arif</span>
           </a>
           <button data-collapse-toggle="navbar-default" type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -126,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
       <div v-if="stateNav.activeNav === 'Home'">
         <HomePage />
       </div>
+       <!-- About -->
+       <div v-if="stateNav.activeNav === 'About'">
+        <AboutPage />
+      </div>
       <!-- page course -->
       <div v-if="stateNav.activeNav === 'Course'">
         <!-- Heading -->
@@ -163,15 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
         <div v-if="state.activeTab === 'dashboard'">
           <ListUser />
         </div>
+      
       </div>
-      <!-- About -->
-      <div v-if="stateNav.activeNav === 'About'">
-        <div class="dark:bg-gray-900 h-screen"></div>
-      </div>
+     
       <!-- Contact -->
       <div v-if="stateNav.activeNav === 'Contact'">
-      <div class="dark:bg-gray-900 h-screen"></div>
-      </div>
+      <ContactPage />  
+    </div>
     </div>
   </div>
 </template>
